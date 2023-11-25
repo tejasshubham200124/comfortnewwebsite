@@ -3,13 +3,13 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+      <footer className="relative z-10 bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] footer">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
               <div className="mb-10 w-full">
                 <a href="/#" className="mb-6 inline-block max-w-[160px]">
-                 
+
                   <h6>Comfort Techno Services</h6>
                   <img
                     src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"

@@ -56,7 +56,6 @@ const CustomCursor = () => {
       hoverable.addEventListener('mouseleave', onMouseHoverOut);
     });
 
-    // Move the cursor
     function onMouseMove(e) {
       bigBall.style.transform = `translate3d(${e.pageX - 15}px, ${e.pageY - 15}px, 0)`;
       smallBall.style.transform = `translate3d(${e.pageX - 5}px, ${e.pageY - 7}px, 0)`;
