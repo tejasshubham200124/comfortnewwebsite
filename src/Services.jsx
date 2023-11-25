@@ -1,5 +1,5 @@
 
-import React , {useEffect} from 'react';
+import React, { useEffect , useState} from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -15,6 +15,16 @@ const ServiceCard = ({ icon, title, description }) => {
     }
   }, [controls, inView]);
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <motion.div
       className="col-lg-4 col-md-6 text-center mb-3"
@@ -23,7 +33,22 @@ const ServiceCard = ({ icon, title, description }) => {
       initial={{ y: 100, opacity: 0 }}
       transition={{ duration: 2 }}
     >
-      <div className="service-wrap">
+      {/* <div className="service-wrap"
+      > */}
+      <div
+        className="service-wrap"
+        style={{
+          position: 'relative',
+          transition: 'all 0.5s',
+          backgroundImage: isHovered ? "url('./bgimagetwo.jpg')" : 'none',
+          backgroundSize: isHovered ? 'cover' : 'auto',
+          backgroundPosition: isHovered ? 'center center' : 'auto',
+          backgroundAttachment: isHovered ? 'local' : 'scroll',
+        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+
         <div className="service-icon">
           <i className={icon}></i>
         </div>
